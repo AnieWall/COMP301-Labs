@@ -1,0 +1,17 @@
+leaf-subject: CN = *.wikipedia.org
+leaf-issuer: C = US, O = Let's Encrypt, CN = YE2
+public-key-alg: id-ecPublicKey
+serial: 062387C4D2B6E686767EFF54CE0B7E26BDDF
+valid-from: Aug 5 19:15:41 2026 GMT
+valid-until: Nov 3 19:15:40 2026 GMT
+
+chain.txt:
+C = US, O = Let's Encrypt, CN = YE2 -> CN = *.wikipedia.org
+C = US, O = ISRG, CN = Root YE -> C = US, O = Let's Encrypt, CN = YE2
+C = US, O = Internet Security Research Group, CN = ISRG Root X2 -> C = US, O = ISRG, CN = Root YE
+C = US, O = Internet Security Research Group, CN = ISRG Root X1 -> C = US, O = Internet Security Research Group, CN = ISRG Root X2
+
+crl: http://ye2.c.lencr.org/96.crl
+ocsp: none
+revocation-choice: CRL
+revocation-justify: CRL is preferred for an offline or intermittently connected client because the revocation list can be cached locally, improving availability even though its status may be less fresh.
