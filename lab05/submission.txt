@@ -15,3 +15,5 @@ crl: http://ye2.c.lencr.org/96.crl
 ocsp: none
 revocation-choice: CRL
 revocation-justify: CRL is preferred for an offline or intermittently connected client because the revocation list can be cached locally, improving availability even though its status may be less fresh.
+
+trust-anchor-note: The server-provided chain ended at ISRG Root X2, whose issuer is ISRG Root X1. ISRG Root X1 was verified in the client's local CA trust store as self-signed because its subject and issuer are identical.
