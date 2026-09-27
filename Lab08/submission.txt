@@ -1,0 +1,22 @@
+server-subject: CN = radius.example.edu
+client-subject: CN = alice@example.edu
+
+eaptls-mutual: alice@example.edu
+eaptls-no-client-cert: FAIL - EAP-TLS requires a client certificate
+
+pap-cleartext: USER alice PASS Tr0pical!9
+
+peap-ttls-tunnel: EAP-Success with no client certificate
+inner-challenge-response: ACCEPT
+inner-replay: REJECT
+
+eapfast-tunnel-key: MATCH
+eapfast-wrong-pac: rejected
+
+scenario-managed: EAP-TLS - IT can provision a certificate to every managed laptop, allowing mutual certificate authentication without passwords.
+
+scenario-byod: PEAP - Personal devices do not require client certificates because users authenticate with credentials inside a server-authenticated TLS tunnel.
+
+scenario-legacy: EAP-TTLS - EAP-TTLS can carry legacy PAP authentication securely inside the encrypted TLS tunnel.
+
+scenario-no-pki: EAP-FAST - A PAC can be used to establish the protected tunnel without requiring a server-certificate PKI.
