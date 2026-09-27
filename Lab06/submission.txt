@@ -1,0 +1,21 @@
+naive-hash-alice: 4761dc30898c0f169467ff74c4941d453efab0a2466542c8175432cc65dadc78
+naive-hash-bob: 4761dc30898c0f169467ff74c4941d453efab0a2466542c8175432cc65dadc78
+identical-hash-users: alice and bob - identical unsalted hashes reveal that the two users share the same password.
+
+salted-record-alice: alice:12218d70553f60030581590dec085e3a:97e3bf251cb914076def4d534ec3f015acb6f42412dca89228b0ec6acf430549
+
+kdf-record-alice: $pbkdf2-sha256$600000$befda47b72e9bc3bc40be3c3f303a0e2$18da6e70e341c679c369ce0c3da60c86c82640226c7cb764e68e539a4a28bc5f
+
+iterations: 600000
+time-sha256-ms: 0.01
+time-pbkdf2-ms: 465.48
+time-scrypt-ms: 77.71
+
+verify-correct: ACCEPT
+verify-wrong: REJECT
+
+crack-rate-unsalted: 60241 hashes/sec
+crack-rate-kdf: 2.1 guesses/sec
+slowdown-factor: approximately 28686x
+
+remaining-risk: Weak passwords can still be guessed even with a slow password KDF, so strong password policy and MFA are still needed.
