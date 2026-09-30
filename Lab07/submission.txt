@@ -1,0 +1,21 @@
+totp-now: 227344
+totp-after-31s: 409110
+hotp-counter-1: 996554
+hotp-counter-2: 602287
+totp-source: python3
+
+hotp-vs-totp: TOTP depends on synchronized time windows, while HOTP depends on synchronized counters.
+
+replay-observation: After waiting 31 seconds, the captured TOTP changed and no longer matched the current code, while the HOTP values stayed the same because their counters did not change.
+
+mfa-accept-correct: ACCEPT
+mfa-reject-wrong-password: REJECT
+mfa-reject-stale-code: REJECT
+
+factor-categories: Knowledge (password), Possession (TOTP authenticator), Inherence (fingerprint or face authentication).
+
+factor-attacks: Passwords can be phished, mitigated with strong password policy and phishing awareness; TOTP codes can be phished and replayed within their valid window, mitigated by phishing-resistant authentication; biometrics can potentially be spoofed, mitigated with liveness detection and secure biometric hardware.
+
+fido2-upgrade: Replace the TOTP possession factor with FIDO2/WebAuthn first because TOTP codes can be phished and replayed, while WebAuthn uses origin-bound asymmetric authentication.
+
+phishing-justify: WebAuthn defeats the replay attack because each authentication response uses a fresh asymmetric signature bound to the legitimate website origin, so a response captured by a phishing site cannot be reused successfully.

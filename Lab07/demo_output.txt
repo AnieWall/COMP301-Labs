@@ -1,0 +1,4 @@
+TOTP now: 468949
+TOTP after 31s: 106698
+HOTP counter=1: 996554
+HOTP counter=2: 602287
