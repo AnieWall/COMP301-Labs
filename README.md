@@ -34,7 +34,7 @@ The labs demonstrate practical experience with:
 | [Lab 02](./Lab02) | Classical Cryptography | Caesar cipher, Rail Fence cipher, encryption and decryption |
 | [Lab 03](./Lab03) | Symmetric Encryption | AES-128-CTR, keys, initialization vectors, OpenSSL |
 | [Lab 04](./Lab04) | Asymmetric Encryption & Key Exchange | RSA-OAEP, hybrid encryption, ECC, ECDH, AES-256-CTR |
-| [Lab 05](./lab05) | TLS, Certificates & PKI | X.509 certificate inspection, certificate chains, trust anchors, CRL and OCSP |
+| [Lab 05](./Lab05) | TLS, Certificates & PKI | X.509 certificate inspection, certificate chains, trust anchors, CRL and OCSP |
 | [Lab 06](./Lab06) | Password Storage | SHA-256 weaknesses, salts, PBKDF2, scrypt, constant-time verification |
 | [Lab 07](./Lab07) | Multi-Factor Authentication | HOTP, TOTP, password + OTP authentication, replay attacks, FIDO2/WebAuthn |
 | [Lab 08](./Lab08) | EAP Authentication Protocols | EAP-TLS, EAP-FAST, EAP-TTLS, PEAP, certificates, PACs, challenge-response |
