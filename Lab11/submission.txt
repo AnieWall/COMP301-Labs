@@ -1,0 +1,8 @@
+forged-balance: balance alice=900, attacker=100
+tokenless-transfer2: bad token
+token-balance: balance alice=850, attacker=150
+ssrf-internal-line: INTERNAL-ONLY customer table: alice, bob, carol
+fetch2-internal: destination not allowed
+analysis-1: The victim's browser automatically attaches eligible session cookies, so the attacker does not need to know the cookie value.
+analysis-2: The protected endpoint requires a valid CSRF token that a malicious page cannot obtain through an ordinary cross-origin request or attach automatically.
+analysis-3: The fetcher runs on the same VM as the internal service and can reach it through the local loopback interface.
