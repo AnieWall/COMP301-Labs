@@ -1,0 +1,9 @@
+reflected-response: <p>You searched for: <script>alert(1)</script></p>
+stored-script-count: 1
+dom-sink-line: document.getElementById("out").innerHTML = location.hash.slice(1);
+fixed-search-response: <p>You searched for: &lt;script&gt;alert(1)&lt;/script&gt;</p>
+csp-header: default-src 'self'
+fixed-script-count: 1
+analysis-1: Stored XSS persists in the application's data and reaches visitors of the affected page, while reflected XSS generally requires a crafted request.
+analysis-2: Output encoding changes the markup by escaping dangerous characters, while CSP restricts script execution in the browser.
+analysis-3: The DOM-based payload is in the URL fragment after #, which the browser does not send to the server.
