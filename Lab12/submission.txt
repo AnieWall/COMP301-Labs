@@ -1,0 +1,10 @@
+bypass-comment: welcome
+bypass-or: welcome
+union-alice: ('alice', 's3cret-alice')
+fixed-login2: denied
+fixed-search2-rows: 0
+traversal-first-line: root:x:0:0:root:/root:/bin/bash
+fixed-dl2: outside the root directory
+analysis-1: The SQL comment removes the password condition, so the value x is never checked by the database.
+analysis-2: UNION requires both SELECT statements to return the same number of columns, and the original query returns two.
+analysis-3: realpath resolves traversal components and symbolic links into a canonical absolute path, unlike os.path.join alone.
