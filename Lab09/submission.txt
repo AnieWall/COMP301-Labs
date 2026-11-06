@@ -1,0 +1,17 @@
+baseline-ip: 142.250.189.142
+baseline-query-time-2nd: 0 ms
+trace-root-server: a.root-servers.net.
+trace-tld-server: a.gtld-servers.net.
+trace-authoritative: ns1.google.com.
+dnssec-google-signed: NO
+dnssec-rrsig-cloudflare: YES
+delv-cloudflare: ; fully validated
+dnssec-failed-doh: 2
+dnssec-failed-doh-cd: 0
+hosts-before: 104.20.23.154
+hosts-after-ping: 127.0.0.1
+hosts-after-dig: 104.20.23.154
+hosts-restored: YES
+analysis-1: The second query was faster because the DNS resolver likely used its cached answer from the first query.
+analysis-2: The hosts file bypassed the root, TLD, and authoritative DNS lookup stages by providing the IP address locally.
+analysis-3: Ping used the system resolver and followed the hosts file, while dig queried DNS directly and returned the public IP address.
