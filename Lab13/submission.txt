@@ -1,0 +1,10 @@
+bof-protected-result: *** stack smashing detected ***: terminated
+bof-rip: 0x5555555551dc
+iof-shrt-max: 32767
+iof-after-plus-one: -32768
+leak-first-rss: 21816
+leak-last-rss: 104232
+leak-free-rss: 2068
+analysis-1: The protected build detected a stack buffer overflow and aborted, while the unprotected build crashed without that protection.
+analysis-2: Hexadecimal 41 represents the ASCII letter A, and the repeated input overwrote the saved return address on the stack.
+analysis-3: A leaking server consumes shared host memory and can create memory pressure that affects other processes and services.
