@@ -1,0 +1,9 @@
+race-lost-1: 5966
+race-lost-2: 5978
+race-lost-3: 5963
+race-lock-lost: 0
+toctou-leaks-1: 6719
+toctou-leaks-2: 6271
+analysis-1: The lost count changed between runs because thread scheduling varied, causing different overlapping reads and writes to the shared counter.
+analysis-2: The time-of-check is os.path.realpath(LINK), while the time-of-use is open(LINK), allowing the symbolic link to change between them.
+analysis-3: Checking the path before opening fails because the link can change afterward, whereas validating an already opened file descriptor checks the same opened file object.
