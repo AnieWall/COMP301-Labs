@@ -1,0 +1,9 @@
+whoami-anonymous: anonymous
+whoami-replay: you are alice
+brute-result: account locked after 6 attempts, attack stopped
+spray-result: 5 accounts opened with Password1: user00, user10, user20, user30, user40
+spray-accounts: user00, user10, user20, user30, user40
+pth-line-3: stolen hash accepted: True
+analysis-1: The server knows only that the client possesses a valid session ID and cannot distinguish Alice from someone replaying her cookie.
+analysis-2: Spraying succeeded because it attempted one password per account, remaining below the per-account lockout threshold that stopped brute force.
+analysis-3: Multi-factor authentication, when enforced for the login, requires an additional factor beyond Alice's captured password hash.
